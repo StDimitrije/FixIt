@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf=8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and proffesional fixups">
+    <meta name="keywords" content="fix, emergency, affordable fix,repairman,repair,proffesional, help">
+    <meta name="author" content="Dimitrije Stankovic">
+    <title>FixIt | New Fixup </title>
+    <link rel="stylesheet" href="./css/homestyle.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>
+                    <span class="highlight">Fix</span>It</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="login.html">LogIn</a>
+                    </li>
+                    <li>
+                        <a href="register.html">Register</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="formSection">
+        <div class="formContainer">
+            <form>
+                <p>Your basic info:</p>
+                <input type="text" placeholder="Firstname">
+                <input type="text" placeholder="Lastname">
+                <br>
+                <input type="email" placeholder="E-mail address">
+                <input type="number" placeholder="Phone number">
+                <br>
+                <input type="text" placeholder="Town name">
+                <input type="text" placeholder="Enter your address(Street name, number)" size="40">
+                <br>
+                <input type="text" placeholder="Appartment number">
+        </div>
+        <div class="formContainer">
+            <p>Give a short description of your problem:</p>
+            <br>
+            <form>
+                <select id="searchList">
+                    <option value="1">Choose a category..</option>
+                    <option value="2">Electrician</option>
+                    <option value="3">Carpenter</option>
+                    <option value="4">Plumber</option>
+                    <option value="5">Painter</option>
+                    <option value="6">Other..</option>
+                </select>
+                <input type="text" placeholder="Short title for your problem" size="31">
+                <br>
+                <textarea rows="10" cols="58"></textarea>
+            </form>
+        </div>
+        <div class="formContainer">
+            <p id="imageP">Add some images to help describe the problem:</p>
+            <br>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+            </form>
+            <br>
+            <button type="submit" class="searchButton">Submit</button>
+            </form>
+        </div>
+        <div id="map" style="width:400px; height:300px;">
+            <h1>MyMap</h1>
+            <script>
+                function myMap() {
+                    var mapOptions = {
+                        center: new google.maps.LatLng(44.787197, 20.457273),
+                        zoom: 10,
+                        mapTypeId: google.maps.MapTypeId.Map,
+                    }
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?fixit-187415&callback=myMap"></script>
+        </div>
+    </section>
+
+    <footer>
+        <p>DL Web Design, Copyright &copy; 2018</p>
+    </footer>
+</body>
+
+</html>
